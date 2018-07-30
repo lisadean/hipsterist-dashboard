@@ -1,0 +1,35 @@
+.project-randomizer-container {
+  font-size: 1em;
+}
+
+.button {
+  position: relative;
+  display: block;
+  color: white;
+  background-color: grey;
+  margin: 20px auto;
+  font-size: 2em;
+  border-radius: 5px;
+}
+
+.project-description {
+  font-size: 1.5em;
+}
+
+.project-source {
+  font-style: italic;
+}
+
+/* Link defaults */
+a:link, a:visited{
+  text-decoration: none;
+  /* color: inherit; */
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #1D57AD;
+}
