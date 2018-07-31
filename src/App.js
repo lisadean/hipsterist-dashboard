@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import Pomodoro from './Pomodoro';
+import Pomodoro from './Pomodoro/pomodoro';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
 
-
-        <Pomodoro />
+        <div className="pomodoro">
+          <Pomodoro />
+        </div>
 
       </div>
     );
