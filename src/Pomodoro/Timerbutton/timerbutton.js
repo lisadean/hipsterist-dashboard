@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as timerStates from '../timerStates';
+import * as timerStates from '../timerstates';
 
 
 class TimerButton extends Component {
