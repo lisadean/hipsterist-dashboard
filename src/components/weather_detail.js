@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from './icon';
 
 const WeatherDetail = ({ locationInfo, weatherInfo }) => {
   console.log(weatherInfo);
@@ -10,12 +11,15 @@ const WeatherDetail = ({ locationInfo, weatherInfo }) => {
       ? new Date(weatherInfo.currently.time * 1000).toLocaleString()
       : "";
  
+   
   return (
     <div>
       <h3>{locationInfo}</h3>
       <p>{time}</p>
       <p>{weatherInfo.currently.summary}</p>
-      <img src="#" alt="weather icon" />
+      
+      <Icon 
+      icon={weatherInfo.currently.icon}/>
       <h2>
         {weatherInfo.currently.apparentTemperature}<span>&deg; F</span>
       </h2>
