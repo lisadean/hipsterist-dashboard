@@ -27,7 +27,6 @@
     width: 100%;
     text-align: center;
     font-size: 2.5em;
-    
 }
 
 .pomodoro .app-content h3 {
@@ -56,14 +55,16 @@
 
 @media (max-width: 355px) {
 
-    .btn {
-        
-    }
     .pomodoro .app-content h3 {
+        width: 60%;
+        text-align: left;
+        font-size: 1.5em;
+    }
+
+    .pomodoro .app-content h2 {
         width: 100%;
         text-align: center;
-
-     
+        font-size: 1.8em;
     }
 }
 
