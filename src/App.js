@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
-import Weather from './components/Weather';
-import Pomodoro from './Pomodoro/pomodoro';
+import React, { Component } from "react";
+import "./App.css";
+import Weather from "./components/Weather";
+import Pomodoro from "./Pomodoro/pomodoro";
 import ProjectRandomizer from './ProjectRandomizer/ProjectRandomizer';
-import MovieDashboard from './MovieDashboard';
+import MovieDashboard from "./MovieDashboard";
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Weather /> */}
+        <Weather />
 
         <div className="pomodoro">
           <Pomodoro />
@@ -20,7 +21,7 @@ class App extends Component {
         </div>
 
         <div>
-        <MovieDashboard />
+          <MovieDashboard />
         </div>
       </div>
     );
