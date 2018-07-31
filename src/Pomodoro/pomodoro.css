@@ -19,8 +19,8 @@
     width: 380px;
     max-height: 380px;
     margin: 100px auto 0;
-    padding: 30px;
-    border: 10px solid rgb(85,107,47);
+    padding: 10px;
+    border: 20px solid rgb(85,107,47);
 }
 
 .pomodoro .app-content h2 {
@@ -42,7 +42,6 @@
 .pomodoro input.pad-fix {
     padding: 1px;
 }
-
 
 
 @media (max-width: 650px) {
