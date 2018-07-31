@@ -6,7 +6,7 @@ import TimerDisplay from './Timerdisplay/timerdisplay';
 import TimerButton from './Timerbutton/timerbutton';
 import TimerConfig from './Timerconfig/timerconfig';
 //import all the states of timerStates
-import * as timerStates from './timerStates';
+import * as timerStates from './timerstates';
 
 
 
