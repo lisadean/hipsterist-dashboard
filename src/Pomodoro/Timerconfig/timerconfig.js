@@ -27,7 +27,7 @@ class TimerConfig extends Component {
                     <div className="col-3">
                         <label htmlFor="hours">Hours</label>
                     </div>
-                    <div className="col-3">
+                    <div className="col-9">
                         <input 
                         id="hours" 
                         className="form-control text-center pad-fix" 
@@ -42,7 +42,7 @@ class TimerConfig extends Component {
                     <div className="col-3">
                         <label htmlFor="hours">Minutes</label>
                     </div>
-                    <div className="col-3">
+                    <div className="col-9">
                         <input 
                         id="minutes" 
                         className="form-control text-center pad-fix" 
@@ -57,7 +57,7 @@ class TimerConfig extends Component {
                     <div className="col-3">
                         <label htmlFor="hours">Seconds</label>
                     </div>
-                    <div className="col-3">
+                    <div className="col-9">
                         <input 
                         id="seconds" 
                         className="form-control text-center pad-fix" 
