@@ -2,16 +2,15 @@ import React from "react";
 import SearchBar from "./search_bar";
 import WeatherDetail from "./weather_detail";
 
-
-   
- const Google_URL=`https://maps.googleapis.com/maps/api/geocode/json?address=Atlanta&key=AIzaSyD5XrrqpfdzbKeFRmqQ1CpQuc0VzHxXZsU`
+const Google_URL = `https://maps.googleapis.com/maps/api/geocode/json?address=Atlanta&key=AIzaSyD5XrrqpfdzbKeFRmqQ1CpQuc0VzHxXZsU`;
 
 class Weather extends React.Component {
   constructor(props) {
     super(props);
-      this.state = {
-        data: []
-      } 
+    this.state = {
+      locationData: [],
+      weatherData: []
+    };
   }
 
   render() {
@@ -19,13 +18,16 @@ class Weather extends React.Component {
       <div>
         <h1>I liked the WEATHER before it was cool.</h1>
         <SearchBar />
-        <WeatherDetail />
+        <WeatherDetail
+          locationInfo={this.state.locationData}
+          weatheInfo={this.state.weatherData}
+        />
       </div>
     );
   }
 
-  componentDidMount(){
-      this._getData();
+  componentDidMount() {
+    this._getData();
   }
 
   _getData = () => {
@@ -33,29 +35,32 @@ class Weather extends React.Component {
     fetch(Google_URL, {
       method: "get"
     })
-    .then(response =>{
-        console.log('got the geocode')
+      .then(response => {
+        console.log("got the geocode");
         // console.log(response.json());
-         return response.json();    
-    }).then((data => {
-        console.log(data)
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        let location = data.results[0].formatted_address;
+        this.setState({ locationData: location });
         let lat = data.results[0].geometry.location.lat;
         let lng = data.results[0].geometry.location.lng;
-        return fetch(this._formattedWeatherUrl(lat,lng), {
+        return fetch(this._formattedWeatherUrl(lat, lng), {
           method: "get"
-        })
-    })).then((weather_response => weather_response.json()))
-    .then(weather_data => {
-      console.log(weather_data)
-      this.setState({data: weather_data})
-    })
+        });
+      })
+      .then(weather_response => weather_response.json())
+      .then(weather_data => {
+        console.log(weather_data);
+        this.setState({ weatherData: weather_data });
+      });
   };
 
-  //get lat and lon
-  _formattedWeatherUrl = (lat, lng ) => {
+  //Function to pass lat and lng into Weather API string
+  _formattedWeatherUrl = (lat, lng) => {
     return `https://my-little-cors-proxy.herokuapp.com/https://api.darksky.net/forecast/acaa4cb5e670e2bd00780293999e62e7/${lat},${lng}`;
-  }
-  //get weather infor based on search
+  };
 }
 
 export default Weather;

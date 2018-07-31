@@ -1,6 +1,6 @@
 import React from "react";
 
-const WeatherDetail = props => {
+const WeatherDetail = ({locationInfo, weatherInfo}) => {
   return (
     <div>
       <h3>Atlanta, GA</h3>
