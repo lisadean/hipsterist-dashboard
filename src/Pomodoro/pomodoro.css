@@ -1,0 +1,32 @@
+.pomodoro {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dokdo', sans-serif, serif;
+}
+
+.pomodoro .app-content {
+    width: 600px;
+    margin: 100px auto 0;
+    padding: 40px;
+    border: 1px solid grey;
+}
+
+.pomodoro .app-content h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.pomodoro .form-group {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8px;
+}
+
+
+
+@media (max-width: 650px) {
+    .pomodoro .app-content {
+        margin: 20px 20px 0;
+        width: auto;
+    }
+}
