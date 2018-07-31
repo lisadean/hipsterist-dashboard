@@ -24,11 +24,12 @@ class ProjectRandomizer extends React.Component {
 
     return (
       <div className="pr-container">
+        <div className="question">Can't come up with a coding project idea?</div>
         <button
           className="button"
           onClick={this.handleButtonClick}
         >
-          Get A Project Idea
+          Get A Random One
         </button>
         <ProjectRandomizerProject
           description={this.state.description}

@@ -23,12 +23,6 @@ class ProjectRandomizerProject extends React.Component {
         <p className="project-description">
           {this.props.description}
         </p>
-        
-          {/* if({this.props.source.url}) {
-            <a href={this.props.source.url}>
-              'Source: ' + {this.props.source.name}
-            </a>
-          } */}
           {this.makeLink()}
       </div>
     );
