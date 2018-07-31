@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import Weather from "./components/Weather";
 import Pomodoro from "./Pomodoro/pomodoro";
-import ProjectRandomizer from "./ProjectRandomizer";
+import ProjectRandomizer from './ProjectRandomizer/ProjectRandomizer';
 import MovieDashboard from "./MovieDashboard";
+
 
 class App extends Component {
   render() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import './ProjectRandomizer.css';
 import ProjectRandomizerProject from './ProjectRandomizerProject';
+import projectList from './projectList';
 
 class ProjectRandomizer extends React.Component {
 
@@ -42,45 +43,3 @@ class ProjectRandomizer extends React.Component {
 }
 
 export default ProjectRandomizer;
-
-let projectSource = [
-  {
-    name: "Martyr2’s Mega Project List",
-    url: 'https://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/',
-  },
-  {
-    name: "Mega Project List",
-    url: 'https://github.com/karan/Projects',
-  }
-];
-
-let projectList = [
-  {
-    description: "Find PI to the Nth Digit - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go.",
-    source: projectSource[1],
-  },
-  {
-    description: 'project 2',
-    source: projectSource[1],
-  },
-  {
-    description: 'project 3',
-    source: projectSource[1],
-  },
-  {
-    description: 'project 4',
-    source: projectSource[1],
-  },
-  {
-    description: 'project 5',
-    source: projectSource[0],
-  },
-  {
-    description: 'project 6',
-    source: projectSource[0],
-  },
-  {
-    description: 'project 7',
-    source: projectSource[0],
-  },
-];
