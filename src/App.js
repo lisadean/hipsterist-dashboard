@@ -10,8 +10,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="weather">
         <Weather />
-
+        </div>
         <div className="pomodoro">
           <Pomodoro />
         </div>

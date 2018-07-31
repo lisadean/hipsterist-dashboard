@@ -1,0 +1,32 @@
+.main-body {
+  border: red 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-h1 {
+  color: blue;
+  font-size: 1.5rem;
+}
+
+.whole-thing {
+  border: green 1px dotted;
+  display: flex;
+}
+
+.main-info {
+  border: purple 1px solid;
+}
+
+.imagine-it {
+  border: pink 1px solid;
+}
+.main-temp {
+  border: orange 1px dashed;
+}
+
+.detail-stuff {
+  border: black 1px solid;
+}

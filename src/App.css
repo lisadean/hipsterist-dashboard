@@ -1,26 +1,23 @@
-
 .app-content {
-    width: 600px;
-    margin: 100px auto 0;
-    padding: 40px;
-    border: 1px solid grey;
+  width: 600px;
+  margin: 100px auto 0;
+  padding: 40px;
+  border: 1px solid grey;
 }
 .app-content h2 {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .form-group {
-    width: 100%;
-    display: flex;
-    margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 8px;
 }
 
-
-
 @media (max-width: 650px) {
-    .app-content {
-        margin: 20px 20px 0;
-        width: auto;
-    }
+  .app-content {
+    margin: 20px 20px 0;
+    width: auto;
+  }
 }
