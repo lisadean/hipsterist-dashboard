@@ -17,12 +17,12 @@ const WeatherDetail = ({ locationInfo, weatherInfo }) => {
       <p>{weatherInfo.currently.summary}</p>
       <img src="#" alt="weather icon" />
       <h2>
-        80<span>&deg; F</span>
+        {weatherInfo.currently.apparentTemperature}<span>&deg; F</span>
       </h2>
-      <p>Humidity: </p>
-      <p>Wind: </p>
-      <p>Precipitation:</p>
-      <p>UV: </p>
+      <p>Humidity: {weatherInfo.currently.humidity} %</p>
+      <p>Wind: {weatherInfo.currently.windSpeed} mph </p>
+      <p>Precipitation: {weatherInfo.currently.precipIntensity}</p>
+      <p>UV Index: {weatherInfo.currently.uvIndex} </p>
     </div>
   );
 };
