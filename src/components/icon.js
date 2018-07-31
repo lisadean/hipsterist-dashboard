@@ -1,7 +1,7 @@
 import React from "react";
 const Icon = ({ icon }) => {
   return (
-    <div >
+    <div className="image-hipster">
       {/*clear day  */}
       {/* <img src="http://weddingflowersbyjuliarose.com/wp-content/uploads/2016/12/Tommys-flower-beard_LoRes05-683x1024.jpg" /> */}
       {/* clear night */}
@@ -18,7 +18,13 @@ const Icon = ({ icon }) => {
       {/* <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjTyIfn98ncAhVJylMKHW2cClwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pinterest.com%2Fgrit211%2Fbeard-time%2F&psig=AOvVaw0KiJwk2slP36hrtRivpWBr&ust=1533146933422810"/> */}
       {/* fog */}
       {/* <img src="https://images.unsplash.com/photo-1525186986620-5a05ad7a000f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bdfe8aca9a263da669676d576f863e99&auto=format&fit=crop&w=1400&q=80" />*/}
-      <img className ="img-fluid" src={_whatsTheImage(icon)} alt="weather icon" />
+
+      <img
+        className="img-fluid"
+        src={_whatsTheImage(icon)}
+        alt={icon}
+        title={icon}
+      />
     </div>
   );
 };

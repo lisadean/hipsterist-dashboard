@@ -15,26 +15,28 @@ const WeatherDetail = ({ locationInfo, weatherInfo }) => {
     <div className="whole-thing">
       {/* Main Info */}
       <div className="main-info">
-        <h3>{locationInfo}</h3>
-        <p>{time}</p>
-        <p>{weatherInfo.currently.summary}</p>
-      </div>
-      {/* Image */}
-      <div className="imagine-it">
-        <Icon icon={weatherInfo.currently.icon} />
-        {/* CurrentTemp */}
         <div className="main-temp">
-          <h2 className="">
+          <h2 className="main-temp-detail">
             {weatherInfo.currently.apparentTemperature}
             <span>&deg; F</span>
           </h2>
         </div>
+        <h3>{locationInfo}</h3>
+        <p className="time-info">{time}</p>
+        <p>{weatherInfo.currently.summary}</p>
+
+        {/* CurrentTemp */}
+      </div>
+      {/* Image */}
+      <div className="imagine-it">
+        <Icon icon={weatherInfo.currently.icon} />
+
         {/* Details */}
         <div className="detail-stuff">
-          <p>Humidity: {weatherInfo.currently.humidity} %</p>
-          <p>Wind: {weatherInfo.currently.windSpeed} mph </p>
-          <p>Precipitation: {weatherInfo.currently.precipIntensity}</p>
-          <p>UV Index: {weatherInfo.currently.uvIndex} </p>
+          <p className="p-info">Humidity: {weatherInfo.currently.humidity} %</p>
+          <p className="p-info">Wind: {weatherInfo.currently.windSpeed} mph </p>
+          {/* <p>Precipitation: {weatherInfo.currently.precipIntensity}</p> */}
+          <p className="p-info">UV Index: {weatherInfo.currently.uvIndex} </p>
         </div>
       </div>
     </div>
