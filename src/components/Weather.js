@@ -2,8 +2,6 @@ import React from "react";
 import SearchBar from "./search_bar";
 import WeatherDetail from "./weather_detail";
 
-const Google_URL = `https://maps.googleapis.com/maps/api/geocode/json?address=Atlanta&key=AIzaSyD5XrrqpfdzbKeFRmqQ1CpQuc0VzHxXZsU`;
-
 class Weather extends React.Component {
   constructor(props) {
     super(props);
@@ -17,19 +15,16 @@ class Weather extends React.Component {
     return (
       <div>
         <h1>I liked the WEATHER before it was cool.</h1>
-        <SearchBar />
+        <SearchBar handleSubmit={this._getData} />
         {this._renderWeatherInfo()}
       </div>
     );
   }
 
-  componentDidMount() {
-    this._getData();
-  }
-
-  _getData = () => {
+  //helper function to get data
+  _getData = input => {
     console.log("about to fetch lat and long");
-    fetch(Google_URL, {
+    fetch(this._formattedGeocodeUrl(input), {
       method: "get"
     })
       .then(response => {
@@ -54,24 +49,31 @@ class Weather extends React.Component {
       });
   };
 
-  //Function to pass lat and lng into Weather API string
+  //helper function to grab user input and insert into Geocode API string
+  _formattedGeocodeUrl = input => {
+    return `https://maps.googleapis.com/maps/api/geocode/json?address=${input}&key=AIzaSyD5XrrqpfdzbKeFRmqQ1CpQuc0VzHxXZsU`;
+  };
+
+  //help function to pass lat and lng into Weather API string
   _formattedWeatherUrl = (lat, lng) => {
     return `https://my-little-cors-proxy.herokuapp.com/https://api.darksky.net/forecast/acaa4cb5e670e2bd00780293999e62e7/${lat},${lng}`;
   };
 
-
   //helper function to render weatherData when the information is recieved.
   _renderWeatherInfo = () => {
     if (this.state.weatherData) {
-      return(
-      <WeatherDetail
-        locationInfo={this.state.locationData}
-        weatherInfo={this.state.weatherData}
-      />);
+      return (
+        <WeatherDetail
+          locationInfo={this.state.locationData}
+          weatherInfo={this.state.weatherData}
+        />
+      );
     } else {
-      return null
+      return null;
     }
   };
+
+  _;
 }
 
 export default Weather;
