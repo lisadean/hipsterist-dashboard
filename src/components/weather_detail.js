@@ -9,11 +9,12 @@ const WeatherDetail = ({ locationInfo, weatherInfo }) => {
     weatherInfo && weatherInfo.currently
       ? new Date(weatherInfo.currently.time * 1000).toLocaleString()
       : "";
+ 
   return (
     <div>
       <h3>{locationInfo}</h3>
       <p>{time}</p>
-      <p>Cloudy with a side of meatballs</p>
+      <p>{weatherInfo.currently.summary}</p>
       <img src="#" alt="weather icon" />
       <h2>
         80<span>&deg; F</span>

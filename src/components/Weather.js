@@ -9,7 +9,7 @@ class Weather extends React.Component {
     super(props);
     this.state = {
       locationData: [],
-      weatherData: []
+      weatherData: null
     };
   }
 
@@ -18,10 +18,7 @@ class Weather extends React.Component {
       <div>
         <h1>I liked the WEATHER before it was cool.</h1>
         <SearchBar />
-        <WeatherDetail
-          locationInfo={this.state.locationData}
-          weatherInfo={this.state.weatherData}
-        />
+        {this._renderWeatherInfo()}
       </div>
     );
   }
@@ -60,6 +57,20 @@ class Weather extends React.Component {
   //Function to pass lat and lng into Weather API string
   _formattedWeatherUrl = (lat, lng) => {
     return `https://my-little-cors-proxy.herokuapp.com/https://api.darksky.net/forecast/acaa4cb5e670e2bd00780293999e62e7/${lat},${lng}`;
+  };
+
+
+  //helper function to render weatherData when the information is recieved.
+  _renderWeatherInfo = () => {
+    if (this.state.weatherData) {
+      return(
+      <WeatherDetail
+        locationInfo={this.state.locationData}
+        weatherInfo={this.state.weatherData}
+      />);
+    } else {
+      return null
+    }
   };
 }
 
