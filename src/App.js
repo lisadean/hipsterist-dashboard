@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Weather from './Weather';
+// import Weather from './Weather';
 import Pomodoro from './Pomodoro/pomodoro';
 import ProjectRandomizer from './ProjectRandomizer';
 import MovieDashboard from './MovieDashboard';
@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Weather />
+        {/* <Weather /> */}
 
         <div className="pomodoro">
           <Pomodoro />
