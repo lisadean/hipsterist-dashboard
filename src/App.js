@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Pomodoro from './Pomodoro/pomodoro';
+import ProjectRandomizer from './ProjectRandomizer';
+
 
 class App extends Component {
   render() {
@@ -11,6 +13,9 @@ class App extends Component {
           <Pomodoro />
         </div>
 
+        <div className="project-randomizer-container">
+          <ProjectRandomizer />
+        </div>
       </div>
     );
   }
