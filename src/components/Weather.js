@@ -20,7 +20,7 @@ class Weather extends React.Component {
         <SearchBar />
         <WeatherDetail
           locationInfo={this.state.locationData}
-          weatheInfo={this.state.weatherData}
+          weatherInfo={this.state.weatherData}
         />
       </div>
     );
