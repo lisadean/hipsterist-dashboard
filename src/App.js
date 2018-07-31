@@ -3,6 +3,7 @@ import './App.css';
 import Weather from './Weather';
 import Pomodoro from './Pomodoro/pomodoro';
 import ProjectRandomizer from './ProjectRandomizer';
+import MovieDashboard from './MovieDashboard';
 
 class App extends Component {
   render() {
@@ -16,6 +17,10 @@ class App extends Component {
 
         <div className="project-randomizer-container">
           <ProjectRandomizer />
+        </div>
+
+        <div>
+        <MovieDashboard />
         </div>
       </div>
     );
