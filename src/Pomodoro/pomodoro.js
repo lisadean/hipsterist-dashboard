@@ -1,10 +1,13 @@
 import React from 'react';
 import moment from 'moment';
+import './pomodoro.css';
 import TimerHeader from './Timerheader/timerheader';
 import TimerDisplay from './Timerdisplay/timerdisplay';
 import TimerButton from './Timerbutton/timerbutton';
 import TimerConfig from './Timerconfig/timerconfig';
+//import all the states of timerStates
 import * as timerStates from './timerstates';
+
 
 
 class Pomodoro extends React.Component {
@@ -79,9 +82,9 @@ class Pomodoro extends React.Component {
 
     render() {
         return (
-            <div className="panel panel-default app-content">
+            <div className="pomodoro panel panel-default app-content">
                 <div className="panel-body">
-                    <div className="container-fluid">
+                    <div id="background" className="container-fluid">
                     <TimerHeader />
                     <TimerDisplay 
                         currentTime={this.state.currentTime}

@@ -22,7 +22,7 @@ class TimerConfig extends Component {
     render() {
         return( 
             <div className="row">
-                <h3 className="text-primary">Set Timer</h3>
+                <h3 className="text-dark">Set Timer</h3>
                 <div className="form-group">
                     <div className="col-3">
                         <label htmlFor="hours">Hours</label>
@@ -30,7 +30,7 @@ class TimerConfig extends Component {
                     <div className="col-9">
                         <input 
                         id="hours" 
-                        className="form-control" 
+                        className="form-control text-center pad-fix" 
                         type="number" 
                         defaultValue={this.props.baseTime.get('hours')} 
                         onChange={this.handleChange}
@@ -45,7 +45,7 @@ class TimerConfig extends Component {
                     <div className="col-9">
                         <input 
                         id="minutes" 
-                        className="form-control" 
+                        className="form-control text-center pad-fix" 
                         type="number" 
                         defaultValue={this.props.baseTime.get('minutes')} 
                         onChange={this.handleChange}
@@ -60,7 +60,7 @@ class TimerConfig extends Component {
                     <div className="col-9">
                         <input 
                         id="seconds" 
-                        className="form-control" 
+                        className="form-control text-center pad-fix" 
                         type="number" 
                         defaultValue={this.props.baseTime.get('seconds')} 
                         onChange={this.handleChange}
