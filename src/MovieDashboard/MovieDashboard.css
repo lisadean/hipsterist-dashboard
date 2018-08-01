@@ -29,8 +29,11 @@ body {
   }
   
   .input-class{
-    height: 30px;
+    height: 34px;
     margin-bottom:10px;
+    border-style:solid;
+    border-color:black;
+    
   }
   
   .outer-div{
@@ -38,16 +41,16 @@ body {
     height:600px;
   }
   
-  .input-class, .button-class{
+  .button-class{
     margin-top: 10px;
     margin-right: 10px;
     font-weight: bold;
     font-size: 20px;
     margin-left:10px;
-  }
-  
-  .button-class{
+    border-style:solid;
+    border-color:black;
     height: 34px;
+
   }
   
   .parent{
@@ -56,6 +59,9 @@ body {
     flex-wrap: wrap;
   }
   
+  .input-style{
+    text-align:center; 
+  }
   
   
   

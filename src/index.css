@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
   background-color: #D8D8D8;
 }
 html{
@@ -29,3 +30,15 @@ hr{
 .area{
  padding-bottom:10px;
 }
+
+}
+
+
+/* a way to override the build in color of the coverflow and apply
+a custom color */
+
+[class^='coverflow__container'],[class^='coverflow__coverflow']{
+  background-color: white !important;
+}
+
+
