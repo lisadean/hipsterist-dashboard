@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 90%;
 
   font-family: "Bubbler One", sans-serif;
 }
@@ -53,9 +54,16 @@
 }
 .main-temp-detail {
   margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 900;
 }
 .time-info {
   margin-bottom: 0;
+  font-size: 1.25rem;
+}
+.summary-info {
+  font-size: 1.15rem;
+  font-weight: 900;
 }
 .detail-stuff {
   /* border: black 1px solid; */
@@ -66,10 +74,23 @@
 
 .p-info {
   margin-bottom: 0;
+  font-size: 1.15rem;
+}
+
+.category {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {
   .image-hipster {
     width: 400px;
+  }
+  .main-body {
+    width: 62%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-body {
+    width: 50%;
   }
 }

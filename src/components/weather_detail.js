@@ -23,7 +23,7 @@ const WeatherDetail = ({ locationInfo, weatherInfo }) => {
         </div>
         <h3>{locationInfo}</h3>
         <p className="time-info">{time}</p>
-        <p>{weatherInfo.currently.summary}</p>
+        <p className="summary-info">{weatherInfo.currently.summary}</p>
 
         {/* CurrentTemp */}
       </div>
@@ -33,10 +33,12 @@ const WeatherDetail = ({ locationInfo, weatherInfo }) => {
 
         {/* Details */}
         <div className="detail-stuff">
-          <p className="p-info">Humidity: {weatherInfo.currently.humidity} %</p>
-          <p className="p-info">Wind: {weatherInfo.currently.windSpeed} mph </p>
+          <p className="p-info">
+            <span class="category">Humidity:</span> {weatherInfo.currently.humidity * 100} %
+          </p>
+          <p className="p-info"><span class="category">Wind:</span> {weatherInfo.currently.windSpeed} mph </p>
           {/* <p>Precipitation: {weatherInfo.currently.precipIntensity}</p> */}
-          <p className="p-info">UV Index: {weatherInfo.currently.uvIndex} </p>
+          <p className="p-info"><span class="category">UV Index:</span> {weatherInfo.currently.uvIndex} </p>
         </div>
       </div>
     </div>
