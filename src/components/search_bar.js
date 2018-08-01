@@ -18,7 +18,7 @@ class SearchBar extends Component {
             onChange={event => this._onInputChange(event.target.value)}
           />
           <button
-            className="btn btn-primary"
+            className="btn btn-success"
             type="submit"
             onClick={event => {
               event.preventDefault();

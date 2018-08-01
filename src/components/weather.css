@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .main-body {
-  border: #009688 1px solid;
+  border:  rgb(85,107,47) 20px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,7 @@
 
 .weather-h1 {
   font-family: "Swanky and Moo Moo", cursive;
-  color: #009688;
+  color: rgb(85,107,47);
   font-size: 1.5rem;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .searchin {
-  border: #009688 1px solid;
+  border:  rgb(85,107,47) 1px solid;
   margin: 3%;
 }
 .main-info {
