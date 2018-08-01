@@ -8,7 +8,7 @@
 
 
 ## Overview:
-QuizMe is a Node.js/Express server-rendered...  Handlebars partials were used to render the front-end views. Settings are stored in a PostgreSQL database. Additions will be made in React.    
+ 
 
 
 ## Built by:
@@ -55,10 +55,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nisl mattis,
 
 ## Obstacles and Breakthroughs
 
-*SAMPLEONE -*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl.
+*The Pomodoro -*
+Getting my head around how 
 ```
-add code snippet here
+    handleChange(ev) {
+        const newBaseTime = this.props.baseTime;
+    
+        if (ev.target.id === 'hours') newBaseTime.subtract(newBaseTime.get('hour'), 
+        'hours').add(parseInt(ev.target.value, 10), 'hours');
+        
+        if (ev.target.id === 'minutes') newBaseTime.subtract(newBaseTime.get('minutes'),
+        'minutes').add(parseInt(ev.target.value, 10), 'minutes');
+        if (ev.target.id === 'seconds') newBaseTime.subtract(newBaseTime.get('seconds'),
+        'seconds').add(parseInt(ev.target.value, 10), 'seconds');
+    
+        this.props.setBaseTime(newBaseTime);
+    }
 ```
 
 *SAMPLETWO -*
