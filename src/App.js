@@ -3,7 +3,7 @@ import "./App.css";
 import Weather from "./components/Weather";
 import Pomodoro from "./Pomodoro/pomodoro";
 import ProjectRandomizer from "./ProjectRandomizer/ProjectRandomizer";
-import MovieDashboard from "./MovieDashboard";
+import MovieDashboard from "./MovieDashboard/MovieDashboard";
 
 class App extends Component {
   render() {
