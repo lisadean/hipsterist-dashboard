@@ -63,10 +63,33 @@ Getting my head around how to set the base time of my application and then work 
     }
 ```
 
-*SAMPLETWO -*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl.
+*Random Project Idea (Lisa) -*
+My component was deliberately very simple. The only struggle I had with it was understanding how to work the JavaScript logic into the React component. I initially tried to include it inside the render method but realized quickly that using helper methods was much easier and cleaner.
 ```
-add code snippet here
+makeLink = () => {
+    if(this.props.source.url) {
+      return (
+        <p className="project-source">
+          Source:&nbsp;
+          <a href={this.props.source.url}>
+            {this.props.source.name}
+          </a>
+        </p>
+      )
+    }
+}
+
+render () {
+
+    return (
+      <div className="project-container">
+        <p className="project-description">
+          {this.props.description}
+        </p>
+          {this.makeLink()}
+      </div>
+    );
+}
 ```
 
 *SAMPLETHREE -*
