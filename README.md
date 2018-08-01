@@ -8,7 +8,7 @@
 
 
 ## Overview:
- 
+Given the time restrictions of the assignment, our group decided to create a dashboard of stand-alone components crafted individually and bound collectively in one place.  Although a robust React application in total, we focused on the basic principles of the library.
 
 
 ## Built by:
@@ -46,17 +46,11 @@ Contributions: Movie Component, README.md
 </p>
 
 
-
-## Minimum Viable Product
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nisl mattis, auctor nunc nec, vehicula diam. Vivamus pharetra tristique fringilla. Curabitur accumsan orci dui, vitae dignissim lacus imperdiet in. Donec molestie semper arcu, ac tempor ante varius vitae. In nisi eros, bibendum eget dui vitae, mollis ultrices massa.
-
-
-
 ## Obstacles and Breakthroughs
 
-*The Pomodoro -*
-Getting my head around how 
+*The Pomodoro (Beth) -*
+Getting my head around how to set the base time of my application and then work the knowledge of getting them to increment/decrement in sync.  I confess, I had to consult multiple resources to understand logic blocks like those below.  I spent an hour or two remembering to 'parseInt' my add methods (thank you Zac Braddy for that, https://zackerthehacker.com/).
+
 ```
     handleChange(ev) {
         const newBaseTime = this.props.baseTime;
@@ -66,6 +60,7 @@ Getting my head around how
         
         if (ev.target.id === 'minutes') newBaseTime.subtract(newBaseTime.get('minutes'),
         'minutes').add(parseInt(ev.target.value, 10), 'minutes');
+        
         if (ev.target.id === 'seconds') newBaseTime.subtract(newBaseTime.get('seconds'),
         'seconds').add(parseInt(ev.target.value, 10), 'seconds');
     
