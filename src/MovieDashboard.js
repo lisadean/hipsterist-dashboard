@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
-import { Fetch } from 'react-request';
-import './MovieDashboard.css';
+import Coverflow from 'react-coverflow';
 
 
 
 class MovieDashboard extends Component {
     constructor(props){
+        
+        console.log('hello');
         super(props);
+        // this.itemSelected=this.itemSelected.bind(this);
         this.state={
-          movies:[],
-          query:''
+            
+          movies:[{
+              Poster:'',
+              Title:''
+
+          }],
+          query:'',
         }
       }
+
+      fn=()=>{
+
+      }
+     
 
   searchMovies =()=>{
      fetch(`http://www.omdbapi.com/?s=${this.state.query}&apikey=bd23d0c5`)
@@ -19,6 +31,7 @@ class MovieDashboard extends Component {
            return  movies.json();
         })
         .then(movies=>{
+            console.log(movies.Search);
             this.setState({
                 movies: movies.Search
             })
@@ -26,7 +39,6 @@ class MovieDashboard extends Component {
         })
 
   }
-
 
   handleQueryInput=(event)=>{
       this.setState({
@@ -38,7 +50,7 @@ class MovieDashboard extends Component {
 
     return (
         <div >
-           <input className="input-class"type='text' 
+           <input className="input-class" type="text" 
                 value={this.state.query}
                 onChange={
                     this.handleQueryInput
@@ -46,25 +58,41 @@ class MovieDashboard extends Component {
             />
             <button className="button-class" onClick={this.searchMovies}>
                 Search Movies</button>
-             <div className="parent">   
-        {
-            this.state.movies.map((movie ,i)=>
-            
-            <div className="outer-div">
-                <div className="movie" key={i}>
-                    <h2 className="name">{movie.Title}</h2>
-                    <div class="container-image">
-                    <img className= "image"src={movie.Poster}/>
-                    </div>
-                </div>
-            </div>
-            )
-        }
+             <div className="parent">
+  
+             
+             <Coverflow 
+                width={960}
+                height={500}
+                displayQuantityOfSide={4}
+                navigation={false}
+                enableHeading={false}
+                infiniteScroll={false}
+                clickable={true} 
+            >
+      {
+
+    this.state.movies.slice().map((movie ,i)=>(
+
+    <img
+        key={i}
+        src={movie.Poster}
+        alt={movie.Title}
+        style={{width: '100%'}}
+      />)
+)
+}
+    
+  </Coverflow>
+ 
+        
         </div>
         </div>
      
     );
   }
+
+  
 }
 
 export default MovieDashboard;
