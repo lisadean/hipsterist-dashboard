@@ -92,10 +92,37 @@ render () {
 }
 ```
 
-*SAMPLETHREE -*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl.
+*Hipsters Liked the Weather before it was cool(Weather Component by Aylin) -*
+I wanted to have fun with the “hipster” theme, so, I thought about how to bring in some funny-hipster images with this mini-project. I took on the task of building a weather forecast component that would bring up a different hipsters depending on the weather description(i.e. cloudy= punk rock or sunny=beards with flowers). The biggest challenge was building a helper function to get data from the Google API and plug in the results into the Dark Sky API. Once I worked through step by step and broke the steps down, it made a lot more sense.
 ```
-add code snippet here
+//helper function to get data
+  _getData = input => {
+    console.log("about to fetch lat and long");
+    fetch(this._formattedGeocodeUrl(input), {
+      method: "get"
+    })
+      .then(response => {
+        console.log("got the geocode");
+        // console.log(response.json());
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        let location = data.results[0].formatted_address;
+        this.setState({ locationData: location });
+        let lat = data.results[0].geometry.location.lat;
+        let lng = data.results[0].geometry.location.lng;
+        return fetch(this._formattedWeatherUrl(lat, lng), {
+          method: "get"
+        });
+      })
+      .then(weather_response => weather_response.json())
+      .then(weather_data => {
+        console.log(weather_data);
+        this.setState({ weatherData: weather_data });
+      });
+  };
+
 ```
 
 *SAMPLEFOUR -*
