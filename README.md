@@ -20,7 +20,7 @@ Contributions: Pomodoro Component, Trello Project Board, README.md
 Contributions: Project Randomizer Component, README.md
 
 [Aylin DeBruyne](https://github.com/adebruyne)  
-Contributions: Weather Component, README.md
+Contributions: Weather Component, Main Dashboard Styling, README.md
 
 [Delia Sanders](https://github.com/Dsande41)  
 Contributions: Movie Component, README.md
@@ -29,7 +29,7 @@ Contributions: Movie Component, README.md
 ## Built with:
 
 * React.js
-* Bootstrap
+* Bootstrap/CSS
 * Node.js
 * Third-Party API's
 
