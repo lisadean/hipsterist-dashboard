@@ -4,7 +4,7 @@
     <img src='readme/homepage.png' alt='homepage'></img>
 </p>
 
-# [Live Demo](**INSERT SURGE***)
+# [Live Demo](greasy-current.surge.sh)
 
 
 ## Overview:
