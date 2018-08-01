@@ -44,7 +44,7 @@ Contributions: Movie Component, README.md
 ## Obstacles and Breakthroughs
 
 *The Pomodoro (Beth) -*
-Getting my head around how to set the base time of my application and then work the knowledge of getting them to increment/decrement in sync.  I confess, I had to consult multiple resources to understand logic blocks like those below.  I spent an hour or two remembering to 'parseInt' my add methods (thank you Zac Braddy for that, https://zackerthehacker.com/).
+Getting my head around how to set the base time of my application and then work the knowledge of increment/decrement them in sync.  I confess, I had to consult multiple resources to understand logic blocks like those below.  I spent an hour or two remembering to 'parseInt' my add methods (thank you Zac Braddy for that, https://zackerthehacker.com/).
 
 ```
     handleChange(ev) {
