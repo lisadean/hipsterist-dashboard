@@ -34,11 +34,6 @@ Contributions: Movie Component, README.md
 * Third-Party API's
 
 
-<p align='center'>
-    <img src='#' alt='??'></img>
-</p>
-
-
 ## Project Whiteboarding
 
 <p align='center'>
