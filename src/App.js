@@ -28,11 +28,9 @@ class App extends Component {
           <div className="pomodoro area area-2">
             <Pomodoro />
           </div>
-
           <div className="project-randomizer-container area">
             <ProjectRandomizer />
           </div>
-
           <div>
             <MovieDashboard className="area" />
           </div>

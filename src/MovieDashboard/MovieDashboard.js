@@ -65,8 +65,8 @@ class MovieDashboard extends Component {
              <div className="parent">
              <StyleRoot>
              <Coverflow 
-                width={375}
-                height={250}
+                // width={375}
+                // height={250}
                 backgroundColor='white'
                
                 displayQuantityOfSide={4}
@@ -75,6 +75,10 @@ class MovieDashboard extends Component {
                 infiniteScroll={false}
                 clickable={true} 
                 media={{
+                    '@media (max-width: 666px)': {
+                        width: '325px',
+                        height: '350px'
+                      },
                       '@media (min-width: 667px)': {
                         width: '667px',
                         height: '500px'
