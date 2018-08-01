@@ -125,10 +125,24 @@ I wanted to have fun with the “hipster” theme, so, I thought about how to br
 
 ```
 
-*SAMPLEFOUR -*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl.
+*Movie search engine (Delia) -*
+My component is fetching information from the omdbapi. The user searches the name of the movie and the application offers all the matching names for the search. Instead of displaying the movie images in a grid format, I used react Coverflow that enables the movies to be displayed in a carousel. 
 ```
-add code snippet here
+
+  searchMovies =()=>{
+     fetch(`http://www.omdbapi.com/?s=${this.state.query}&apikey=bd23d0c5`)
+        .then(movies=>{
+           return  movies.json();
+        })
+        .then(movies=>{
+            console.log(movies.Search);
+            this.setState({
+                movies: movies.Search
+            })
+
+        })
+
+  }
 ```
 
 
