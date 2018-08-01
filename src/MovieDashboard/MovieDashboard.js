@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Coverflow from 'react-coverflow';
+import {StyleRoot} from 'radium';
+import './MovieDashboard.css';
 
 
 
@@ -50,6 +52,7 @@ class MovieDashboard extends Component {
 
     return (
         <div >
+            <div className="input-style">
            <input className="input-class" type="text" 
                 value={this.state.query}
                 onChange={
@@ -58,21 +61,39 @@ class MovieDashboard extends Component {
             />
             <button className="button-class" onClick={this.searchMovies}>
                 Search Movies</button>
+            </div>
              <div className="parent">
-  
-             
+             <StyleRoot>
              <Coverflow 
-                width={960}
-                height={500}
+                width={375}
+                height={250}
+                backgroundColor='white'
+               
                 displayQuantityOfSide={4}
                 navigation={false}
                 enableHeading={false}
                 infiniteScroll={false}
                 clickable={true} 
+                media={{
+                      '@media (min-width: 667px)': {
+                        width: '667px',
+                        height: '500px'
+                      },
+                      '@media (min-width: 1024px)': {
+                        width: '1024px',
+                        height: '600px'
+                      },
+                      '@media (min-width: 1400px)': {
+                        width: '1400px',
+                        height: '800px'
+                      }
+
+                }}
+
             >
       {
 
-    this.state.movies.slice().map((movie ,i)=>(
+    this.state.movies.map((movie ,i)=>(
 
     <img
         key={i}
@@ -84,6 +105,7 @@ class MovieDashboard extends Component {
 }
     
   </Coverflow>
+  </StyleRoot>
  
         
         </div>

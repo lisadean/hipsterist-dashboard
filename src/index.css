@@ -3,3 +3,12 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+/* a way to override the build in color of the coverflow and apply
+a custom color */
+
+[class^='coverflow__container'],[class^='coverflow__coverflow']{
+  background-color: white !important;
+}
+
