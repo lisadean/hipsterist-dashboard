@@ -1,7 +1,7 @@
 # Hipster-Dashboard
 
 <p align='center'>
-    <img src='#' alt='homepage'></img>
+    <img src='readme/trello.png' alt='homepage'></img>
 </p>
 
 # [Live Demo](**INSERT SURGE***)
