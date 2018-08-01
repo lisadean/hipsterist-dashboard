@@ -4,7 +4,7 @@
     <img src='readme/homepage.png' alt='homepage'></img>
 </p>
 
-# [Live Demo](www.greasy-current.surge.sh)
+# [Live Demo](https://greasy-current.surge.sh)
 
 
 ## Overview:
