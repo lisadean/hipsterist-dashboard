@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from './icon';
+import Icon from "./icon";
 
 const WeatherDetail = ({ locationInfo, weatherInfo }) => {
   console.log(weatherInfo);
@@ -10,23 +10,37 @@ const WeatherDetail = ({ locationInfo, weatherInfo }) => {
     weatherInfo && weatherInfo.currently
       ? new Date(weatherInfo.currently.time * 1000).toLocaleString()
       : "";
- 
-   
+
   return (
-    <div>
-      <h3>{locationInfo}</h3>
-      <p>{time}</p>
-      <p>{weatherInfo.currently.summary}</p>
-      
-      <Icon 
-      icon={weatherInfo.currently.icon}/>
-      <h2>
-        {weatherInfo.currently.apparentTemperature}<span>&deg; F</span>
-      </h2>
-      <p>Humidity: {weatherInfo.currently.humidity} %</p>
-      <p>Wind: {weatherInfo.currently.windSpeed} mph </p>
-      <p>Precipitation: {weatherInfo.currently.precipIntensity}</p>
-      <p>UV Index: {weatherInfo.currently.uvIndex} </p>
+    <div className="whole-thing">
+      {/* Main Info */}
+      <div className="main-info">
+        <div className="main-temp">
+          <h2 className="main-temp-detail">
+            {weatherInfo.currently.apparentTemperature}
+            <span>&deg; F</span>
+          </h2>
+        </div>
+        <h3>{locationInfo}</h3>
+        <p className="time-info">{time}</p>
+        <p className="summary-info">{weatherInfo.currently.summary}</p>
+
+        {/* CurrentTemp */}
+      </div>
+      {/* Image */}
+      <div className="imagine-it">
+        <Icon icon={weatherInfo.currently.icon} />
+
+        {/* Details */}
+        <div className="detail-stuff">
+          <p className="p-info">
+            <span class="category">Humidity:</span> {weatherInfo.currently.humidity * 100} %
+          </p>
+          <p className="p-info"><span class="category">Wind:</span> {weatherInfo.currently.windSpeed} mph </p>
+          {/* <p>Precipitation: {weatherInfo.currently.precipIntensity}</p> */}
+          <p className="p-info"><span class="category">UV Index:</span> {weatherInfo.currently.uvIndex} </p>
+        </div>
+      </div>
     </div>
   );
 };

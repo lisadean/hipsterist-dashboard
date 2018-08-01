@@ -2,20 +2,21 @@ import React, { Component } from "react";
 import "./App.css";
 import Weather from "./components/Weather";
 import Pomodoro from "./Pomodoro/pomodoro";
-import ProjectRandomizer from './ProjectRandomizer/ProjectRandomizer';
+import ProjectRandomizer from "./ProjectRandomizer/ProjectRandomizer";
 import MovieDashboard from "./MovieDashboard";
-
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Weather />
-
-        <div className="pomodoro">
-          <Pomodoro />
+        <div className=" ">
+          <div className="weather  col-sm">
+            <Weather />
+          </div>
+          <div className="pomodoro col-sm">
+            <Pomodoro />
+          </div>
         </div>
-
         <div className="project-randomizer-container">
           <ProjectRandomizer />
         </div>

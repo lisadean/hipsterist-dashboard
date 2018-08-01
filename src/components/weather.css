@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+.main-body {
+  border: #009688 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+  font-family: "Bubbler One", sans-serif;
+}
+
+.weather-h1 {
+  font-family: "Swanky and Moo Moo", cursive;
+  color: #009688;
+  font-size: 1.5rem;
+}
+
+.whole-thing {
+  /* border: green 1px dotted; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchin {
+  border: #009688 1px solid;
+  margin: 4%;
+}
+.main-info {
+  /* border: purple 1px solid; */
+  width: 100%;
+  text-align: center;
+}
+
+.imagine-it {
+  /* border: pink 1px solid; */
+}
+
+.image-hipster {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.image-hipster img {
+  width: 100%;
+}
+.main-temp {
+  /* border: orange 1px dashed; */
+}
+.main-temp-detail {
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.time-info {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+.summary-info {
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+.detail-stuff {
+  /* border: black 1px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-info {
+  margin-bottom: 0;
+  font-size: 1.15rem;
+}
+
+.category {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .image-hipster {
+    width: 400px;
+  }
+  .main-body {
+    width: 62%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-body {
+    width: 50%;
+  }
+}

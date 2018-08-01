@@ -1,4 +1,5 @@
 import React from "react";
+import "./weather.css";
 import SearchBar from "./search_bar";
 import WeatherDetail from "./weather_detail";
 
@@ -13,9 +14,11 @@ class Weather extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>I liked the WEATHER before it was cool.</h1>
-        <SearchBar handleSubmit={this._getData} />
+      <div className="main-body container my-5">
+        <h4 className="weather-h1 text-center ">
+          I liked the <span class="category "><strong>WEATHER</strong></span> before it was cool.
+        </h4>
+        <SearchBar className="text-center" handleSubmit={this._getData} />
         {this._renderWeatherInfo()}
       </div>
     );
