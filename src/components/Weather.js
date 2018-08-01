@@ -14,7 +14,7 @@ class Weather extends React.Component {
 
   render() {
     return (
-      <div className="main-body container my-5">
+      <div className="main-body container">
         <h4 className="weather-h1 text-center ">
           I liked the{" "}
           <span class="category ">
