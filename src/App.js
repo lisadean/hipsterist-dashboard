@@ -9,20 +9,33 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className=" ">
-          <div className="weather  col-sm">
-            <Weather />
+        {/* Header */}
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Welcome to Hipsterest</h1>
+            <p class="lead">
+              This is an obscure dashboard you've probably never heard of.
+            </p>
+            <hr />
           </div>
-          <div className="pomodoro col-sm">
-            <Pomodoro />
-          </div>
-        </div>
-        <div className="project-randomizer-container">
-          <ProjectRandomizer />
         </div>
 
-        <div>
-          <MovieDashboard />
+        {/* MAIN */}
+        <div className="contianer">
+          <div className="weather area">
+            <Weather />
+          </div>
+          <div className="pomodoro area area-2">
+            <Pomodoro />
+          </div>
+
+          <div className="project-randomizer-container area">
+            <ProjectRandomizer />
+          </div>
+
+          <div>
+            <MovieDashboard className="area" />
+          </div>
         </div>
       </div>
     );

@@ -9,7 +9,6 @@
   font-size: 2em;
   background-color: darkslategray;
   color: white;
-
 }
 
 .button {
@@ -35,15 +34,26 @@
 }
 
 /* Link defaults */
-a:link, a:visited{
+a:link,
+a:visited {
   text-decoration: none;
   /* color: inherit; */
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   text-decoration: underline;
 }
 
-a:link, a:visited, a:hover, a:active {
-  color: #1D57AD;
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #1d57ad;
+}
+
+.pr-container {
+  margin: 5%;
+  border: 20px solid rgb(85, 107, 47);
+  padding: 6%;
 }
